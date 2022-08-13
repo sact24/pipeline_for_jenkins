@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+    
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage("second"){
+            steps{
+                bat 'echo gradle build will go here'
+            }
+        }
+        }
+    }
+
