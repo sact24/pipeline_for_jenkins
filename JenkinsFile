@@ -14,7 +14,8 @@ pipeline {
             }
         }
         stage("added via gitpush"){
-            echo 'auto deployed via gitpusg trigger'
+            steps{
+                echo 'auto deployed via gitpusg trigger'
         }
         }
     }
