@@ -10,7 +10,7 @@ pipeline {
         }
         stage("second"){
             steps{
-                bat 'echo gradle build will go here'
+                sh 'echo gradle build will go here'
             }
         }
         }
