@@ -13,6 +13,9 @@ pipeline {
                 sh 'echo gradle build will go here'
             }
         }
+        stage("added via gitpush"){
+            echo 'auto deployed via gitpusg trigger'
+        }
         }
     }
 
