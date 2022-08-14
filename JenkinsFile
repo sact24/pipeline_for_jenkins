@@ -1,27 +1,15 @@
 pipeline {
     agent any
-    
-
     stages {
-        stage('first') {
+        stage('Example') {
             steps {
                 echo 'Hello World'
             }
         }
-        stage("second"){
-            steps{
-                sh 'echo gradle build will go here'
-            }
+    }
+    post { 
+        always { 
+            emailext body: 'Pipeline executed.', subject: 'Automated email via Jenkins', to: 'sachin.thakur@rezo.ai'
         }
-        stage("added via gitpush"){
-            steps{
-                echo 'auto deployed via gitpusg trigger'
-        }
-        }
-         post {
-            always {
-                emailext body: 'Pipeline executed.', subject: 'Automated email via Jenkins', to: 'sachin.thakur@rezo.ai'
-            }
-            }
     }
 }
