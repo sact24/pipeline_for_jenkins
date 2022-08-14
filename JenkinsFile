@@ -18,5 +18,9 @@ pipeline {
                 echo 'auto deployed via gitpusg trigger'
         }
         }
-    }
+    post {
+        always {
+            emailext body: 'Pipeline executed.', subject: 'Automated email via Jenkins', to: 'sachin.thakur@rezo.ai'
+            }
+            }
 }
