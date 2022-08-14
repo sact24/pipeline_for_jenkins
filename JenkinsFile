@@ -8,7 +8,7 @@ pipeline {
         }
         stage('email') {
             steps{
-            emailext attachLog:true, body: 'Pipeline executed.', subject: 'Automated email via Jenkins', to: 'sat24@gmail.com'
+            emailext attachLog:true, body: 'Pipeline executed.', subject: 'Automated email via Jenkins', to: 'sact24@gmail.com'
         }
     }
     }
