@@ -9,7 +9,7 @@ pipeline {
     }
     post { 
         always { 
-            emailext body: 'Pipeline executed.', subject: 'Automated email via Jenkins', to: 'sachin.thakur@rezo.ai'
+            emailext attachLog:true, body: 'Pipeline executed.', subject: 'Automated email via Jenkins', to: 'sat24@gmail.com'
         }
     }
 }
