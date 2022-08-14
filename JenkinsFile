@@ -6,10 +6,10 @@ pipeline {
                 echo 'Hello World'
             }
         }
-    }
-    post { 
-        always { 
+        stage('email') {
+            steps{
             emailext attachLog:true, body: 'Pipeline executed.', subject: 'Automated email via Jenkins', to: 'sat24@gmail.com'
         }
     }
-}
+    }
+}    
